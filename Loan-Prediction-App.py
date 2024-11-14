@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import time
 
 # Load and preprocess the dataset
-loan_data = pd.read_csv(r"C:\Users\aaras\OneDrive\Desktop\CS Work\Loan-Prediction-Tool\loan_approval_dataset.csv")
+loan_data = pd.read_csv("loan_approval_dataset.csv")
 loan_data.columns = loan_data.columns.str.strip()
 for col in loan_data.select_dtypes(include=['object']).columns:
     loan_data[col] = loan_data[col].str.strip()
